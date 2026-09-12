@@ -15,15 +15,6 @@ PirateRescue AI was developed by **Team ByteForce** as the solution for:
 **PS #05 — Pirate Island Rescue**
 
 ---
-## 🎬 Demo Video
-
-Watch the complete PirateRescue AI demonstration:
-
-**[▶️ Watch PirateRescue AI Demo Video](./Demovideo%20PirateRescue%20AI.mp4)**
-
-The demo showcases the rescue coordination dashboard, island prioritization, fleet operations, optimization engine, vessel-to-island assignments, interactive map, rescue simulation, and dynamic re-optimization workflow.
-
----
 
 ## 🎯 Problem Statement
 

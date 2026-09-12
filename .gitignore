@@ -1,0 +1,91 @@
+# ==============================================================================
+# PirateRescue AI - Git Ignore
+# ==============================================================================
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*$py.class
+
+# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing & Code Analysis
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+
+# Environment & Secrets Protection
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# Node Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Frontend & Distribution Builds
+dist/
+dist-ssr/
+build/
+*.egg-info/
+*.egg
+
+# IDE & Editor Configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.agent/
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Temporary & Swap Files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Local Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Test & Coverage Reports
+coverage/
+reports/
+tmp/
+temp/

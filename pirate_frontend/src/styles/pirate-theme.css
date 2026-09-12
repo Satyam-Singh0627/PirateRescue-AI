@@ -1,0 +1,324 @@
+/**
+ * PirateRescue AI — Antique Dark Nautical & Carved Timber Design System
+ * Matches the 17th Century Maritime Adventure & Recovery Landing Page Theme
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cinzel+Decorative:wght@700;900&family=Pirata+One&family=IM+Fell+English:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ── Backgrounds (Antique Dark Walnut & Warm Parchment) ── */
+  --bg-base:        #1B1009;   /* Deep antique mahogany outer background */
+  --bg-surface:     #24140A;   /* Secondary dark timber panels */
+  --bg-card:        #EBD6AD;   /* Warm antique parchment card background */
+  --bg-raised:      #F3E5CA;   /* Elevated light parchment */
+  --bg-subtle:      #2D1A0E;   /* Dark timber hover / subtle tint */
+  --bg-overlay:     rgba(18, 10, 5, 0.85); /* Modal backdrop */
+
+  /* ── Maritime Gold & Accent Tones ── */
+  --peach-soft:     #C59A45;   /* Warm pirate gold */
+  --peach-primary:  #D4A017;   /* Rich gold highlight */
+  --terracotta:     #8C2314;   /* Wax seal crimson */
+  --terracotta-dark:#6E1609;   /* Deep red hover */
+
+  /* ── Dark Inks & Contrast Typography ── */
+  --navy-deep:      #241308;   /* Deep walnut ink on parchment cards */
+  --text-primary:   #F5E5C9;   /* Warm antique cream for text on dark surfaces */
+  --text-secondary: #D4B886;   /* Weathered gold labels on dark surfaces */
+  --text-muted:     #A37E47;   /* Muted brass captions & metadata */
+  --text-on-dark:   #FFF8EC;
+
+  /* ── Gold Trim & Medallion Shading ── */
+  --gold:           #C59A45;   /* Authentic maritime brass gold */
+  --gold-light:     #F1D48A;   /* Polished gold highlight */
+  --gold-dim:       rgba(197, 154, 69, 0.18);
+  --gold-border:    rgba(197, 154, 69, 0.45);
+
+  /* ── Operational Status Colors (Aged Antique Palette) ── */
+  --status-critical:#8C2314;   /* Wax seal crimson */
+  --status-high:    #C77E4A;   /* Weathered amber */
+  --status-medium:  #B8954A;   /* Nautical brass gold */
+  --status-low:     #246B3E;   /* Deep maritime sea green */
+  --status-ok:      #246B3E;
+  --color-route:    #C59A45;   /* Golden nautical route */
+  --color-ship:     #D4A017;   /* Golden galleon accent */
+
+  /* ── Borders & Dividers ── */
+  --border-default: #4E2E16;   /* Carved dark wood border */
+  --border-subtle:  #382010;   /* Hairline wood divider */
+  --border-peach:   #8C6538;
+  --border-gold:    #C59A45;
+
+  /* ── Typography System ── */
+  --font-sans:      'Cinzel', system-ui, -apple-system, sans-serif;
+  --font-serif:     'IM Fell English', Georgia, serif;
+  --font-mono:      'IBM Plex Mono', 'Courier New', monospace;
+  --font-display:   'Pirata One', 'Cinzel Decorative', cursive, serif;
+
+  /* ── Shadows & Depth ── */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.85);
+
+  /* ── Transitions ── */
+  --transition: 150ms ease;
+  --transition-md: 250ms ease;
+
+  /* Legacy aliases for backward compatibility */
+  --bg-abyss:             var(--bg-base);
+  --bg-deck:              var(--bg-surface);
+  --bg-panel:             var(--bg-surface);
+  --bg-panel-translucent: rgba(36, 20, 10, 0.95);
+  --bg-card-hover:        var(--bg-subtle);
+  --gold-primary:         var(--gold);
+  --gold-bright:          var(--gold-light);
+  --danger-crimson:       var(--status-critical);
+  --warning-amber:        var(--status-high);
+  --medium-gold:          var(--status-medium);
+  --success-emerald:      var(--status-low);
+  --sea-azure:            var(--color-route);
+  --text-parchment:       var(--text-primary);
+  --font-pirate:          var(--font-display);
+  --font-heading:         var(--font-display);
+}
+
+/* ── Global Reset ────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Antique Scrollbars ──────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #180D07; }
+::-webkit-scrollbar-thumb { background: #5C381E; border-radius: 4px; border: 1px solid #382010; }
+::-webkit-scrollbar-thumb:hover { background: #8C6538; }
+
+/* ── Primary Action Button (Carved Wood & Gold Kraken Style) ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: linear-gradient(180deg, #A47432 0%, #754F19 60%, #4D320B 100%);
+  color: #FFFFFF;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
+  border: 2px solid #F1D48A;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition);
+  flex-shrink: 0;
+  user-select: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.65), inset 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(180deg, #B8853D 0%, #8A5E21 60%, #5E3D10 100%);
+  border-color: #FFF0C8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.85), 0 0 14px rgba(241, 212, 138, 0.5);
+}
+.btn-primary:active:not(:disabled) { transform: translateY(1px); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Legacy alias */
+.btn-gold {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: linear-gradient(180deg, #A47432 0%, #754F19 60%, #4D320B 100%);
+  color: #FFFFFF;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
+  border: 2px solid #F1D48A;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition);
+  flex-shrink: 0;
+  user-select: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.65), inset 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+.btn-gold:hover:not(:disabled) {
+  background: linear-gradient(180deg, #B8853D 0%, #8A5E21 60%, #5E3D10 100%);
+  border-color: #FFF0C8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.85), 0 0 14px rgba(241, 212, 138, 0.5);
+}
+.btn-gold:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Secondary Button (Dark Timber & Gold Trim) ───────────── */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 15px;
+  background: linear-gradient(180deg, #4A331E 0%, #2D1D0F 60%, #1D1108 100%);
+  color: #F5E5C9;
+  font-family: 'Cinzel', serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  border: 1.5px solid #8C6538;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition);
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+.btn-secondary:hover {
+  background: linear-gradient(180deg, #5C4027 0%, #3B2615 60%, #26160B 100%);
+  border-color: #F1D48A;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.7), 0 0 10px rgba(241, 212, 138, 0.25);
+}
+.btn-secondary.active-border {
+  border-color: #38D9A9;
+  color: #38D9A9;
+  background: rgba(36, 110, 70, 0.25);
+}
+
+/* ── Icon Button (Carved Wood Medallion) ──────────────────── */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(180deg, #3A2214 0%, #25140A 100%);
+  color: #D6B26A;
+  border: 1.5px solid #7D572B;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition);
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+.btn-icon:hover {
+  background: linear-gradient(180deg, #4E301D 0%, #321B0E 100%);
+  color: #F1D48A;
+  border-color: #C59A45;
+  transform: translateY(-1px);
+}
+
+/* ── Status Badges (Antique Aged Wax & Leather Badges) ─────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.badge-critical {
+  background: #75140C;
+  color: #FFEAE7;
+  border: 1px solid #A7281D;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.badge-high {
+  background: #7E4A29;
+  color: #FFEDDA;
+  border: 1px solid #D6976A;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.badge-medium {
+  background: #68480C;
+  color: #FFF8E8;
+  border: 1px solid #C59A45;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.badge-low {
+  background: #184D2B;
+  color: #E3FBE9;
+  border: 1px solid #3E9B72;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Antique Parchment Modals ────────────────────────────── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-overlay);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+}
+.modal-dialog {
+  background: #F3E5CA;
+  border: 3px solid #5A381C;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 820px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.9), inset 0 0 30px rgba(78, 48, 22, 0.25);
+  overflow: hidden;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 2px solid #5A381C;
+  background: linear-gradient(180deg, #3A2214 0%, #25140A 100%);
+}
+.modal-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #EBD6A7;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+.modal-body {
+  padding: 22px;
+  overflow-y: auto;
+  color: #2B180C;
+  background: #F3E5CA;
+  font-family: var(--font-sans);
+}
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 14px 20px;
+  border-top: 2px solid #8C6538;
+  background: #E8D3AB;
+}

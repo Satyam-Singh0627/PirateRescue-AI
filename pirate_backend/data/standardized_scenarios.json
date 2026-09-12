@@ -1,0 +1,840 @@
+{
+  "base_port": {
+    "id": "port_royal",
+    "name": "Port Royal Stronghold (Base)",
+    "latitude": 17.936,
+    "longitude": -76.841,
+    "description": "Historic pirate capital of Jamaica. All rescue fleets dispatch and return to this fortified harbor."
+  },
+  "scenarios": [
+    {
+      "id": "tutorial_calm",
+      "name": "Tutorial: The Calm Before the Storm",
+      "difficulty": "Easy",
+      "description": "A light gale stranded three fishing communities near the Windward Passage. Quick, straightforward deployment.",
+      "islands": [
+        {
+          "id": "isl_tortuga",
+          "name": "Isle of Tortuga",
+          "latitude": 20.054,
+          "longitude": -72.787,
+          "population": 150,
+          "children_count": 35,
+          "elderly_count": 25,
+          "injured_count": 20,
+          "urgency_level": "CRITICAL",
+          "urgency_score": 92.5,
+          "medical_needs": [
+            "Fresh Water",
+            "Splints",
+            "Burn Ointment"
+          ],
+          "hazard_level": 1.2
+        },
+        {
+          "id": "isl_skull_rock",
+          "name": "Skull Rock Atoll",
+          "latitude": 19.340,
+          "longitude": -74.120,
+          "population": 80,
+          "children_count": 16,
+          "elderly_count": 12,
+          "injured_count": 8,
+          "urgency_level": "HIGH",
+          "urgency_score": 68.0,
+          "medical_needs": [
+            "Rations",
+            "Bandages"
+          ],
+          "hazard_level": 1.0
+        },
+        {
+          "id": "isl_dead_man_cay",
+          "name": "Dead Man's Cay",
+          "latitude": 18.520,
+          "longitude": -75.500,
+          "population": 120,
+          "children_count": 20,
+          "elderly_count": 15,
+          "injured_count": 10,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 48.0,
+          "medical_needs": [
+            "Basic Aid Kits"
+          ],
+          "hazard_level": 0.8
+        }
+      ],
+      "ships": [
+        {
+          "id": "ship_black_pearl",
+          "name": "The Black Pearl",
+          "type": "Fast Sloop",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 250,
+          "current_load": 0,
+          "speed_knots": 32.0,
+          "fuel_capacity": 800.0,
+          "current_fuel": 800.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_hms_dauntless",
+          "name": "HMS Dauntless",
+          "type": "Cutter",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 200,
+          "current_load": 0,
+          "speed_knots": 27.5,
+          "fuel_capacity": 750.0,
+          "current_fuel": 750.0,
+          "status": "DOCKED"
+        }
+      ]
+    },
+    {
+      "id": "gale_of_tortuga",
+      "name": "Standard: The Gale of Tortuga",
+      "difficulty": "Medium",
+      "description": "A fierce tropical depression has battered five pirate outposts across the northern Caribbean shelf.",
+      "islands": [
+        {
+          "id": "isl_tortuga",
+          "name": "Isle of Tortuga",
+          "latitude": 20.054,
+          "longitude": -72.787,
+          "population": 310,
+          "children_count": 75,
+          "elderly_count": 45,
+          "injured_count": 40,
+          "urgency_level": "CRITICAL",
+          "urgency_score": 95.0,
+          "medical_needs": [
+            "Clean Water",
+            "Surgical Kits",
+            "Blood Plasma"
+          ],
+          "hazard_level": 2.1
+        },
+        {
+          "id": "isl_muerta",
+          "name": "Isla de Muerta",
+          "latitude": 18.210,
+          "longitude": -71.250,
+          "population": 180,
+          "children_count": 30,
+          "elderly_count": 28,
+          "injured_count": 22,
+          "urgency_level": "HIGH",
+          "urgency_score": 82.0,
+          "medical_needs": [
+            "Antidotes",
+            "Bandages",
+            "Rations"
+          ],
+          "hazard_level": 1.7
+        },
+        {
+          "id": "isl_shipwreck",
+          "name": "Shipwreck Cove",
+          "latitude": 19.820,
+          "longitude": -75.980,
+          "population": 220,
+          "children_count": 40,
+          "elderly_count": 35,
+          "injured_count": 15,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 64.0,
+          "medical_needs": [
+            "Dry Timber",
+            "Rations",
+            "Blankets"
+          ],
+          "hazard_level": 1.4
+        },
+        {
+          "id": "isl_cannibal",
+          "name": "Cannibal Cay",
+          "latitude": 17.500,
+          "longitude": -73.200,
+          "population": 90,
+          "children_count": 18,
+          "elderly_count": 12,
+          "injured_count": 8,
+          "urgency_level": "LOW",
+          "urgency_score": 38.0,
+          "medical_needs": [
+            "Basic First Aid"
+          ],
+          "hazard_level": 0.9
+        },
+        {
+          "id": "isl_rum_cay",
+          "name": "Rum Runner's Reef",
+          "latitude": 21.050,
+          "longitude": -74.850,
+          "population": 160,
+          "children_count": 32,
+          "elderly_count": 20,
+          "injured_count": 18,
+          "urgency_level": "HIGH",
+          "urgency_score": 76.0,
+          "medical_needs": [
+            "Fresh Water",
+            "Antibiotics"
+          ],
+          "hazard_level": 1.6
+        }
+      ],
+      "ships": [
+        {
+          "id": "ship_black_pearl",
+          "name": "The Black Pearl",
+          "type": "Fast Sloop",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 260,
+          "current_load": 0,
+          "speed_knots": 32.0,
+          "fuel_capacity": 900.0,
+          "current_fuel": 900.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_queen_anne",
+          "name": "Queen Anne's Revenge",
+          "type": "Heavy Transport",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 550,
+          "current_load": 0,
+          "speed_knots": 21.0,
+          "fuel_capacity": 1400.0,
+          "current_fuel": 1400.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_flying_dutchman",
+          "name": "Flying Dutchman",
+          "type": "Medium Frigate",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 350,
+          "current_load": 0,
+          "speed_knots": 28.0,
+          "fuel_capacity": 1100.0,
+          "current_fuel": 1100.0,
+          "status": "DOCKED"
+        }
+      ]
+    },
+    {
+      "id": "krakens_wake",
+      "name": "Advanced: The Kraken's Wake",
+      "difficulty": "Hard",
+      "description": "Ten islands devastated across the Greater Antilles. Tight capacities force high-stakes triage decisions.",
+      "islands": [
+        {
+          "id": "isl_tortuga",
+          "name": "Isle of Tortuga",
+          "latitude": 20.054,
+          "longitude": -72.787,
+          "population": 340,
+          "children_count": 80,
+          "elderly_count": 60,
+          "injured_count": 55,
+          "urgency_level": "CRITICAL",
+          "urgency_score": 96.0,
+          "medical_needs": [
+            "Trauma Surgeons",
+            "Blood Units"
+          ],
+          "hazard_level": 2.5
+        },
+        {
+          "id": "isl_muerta",
+          "name": "Isla de Muerta",
+          "latitude": 18.210,
+          "longitude": -71.250,
+          "population": 210,
+          "children_count": 45,
+          "elderly_count": 30,
+          "injured_count": 35,
+          "urgency_level": "CRITICAL",
+          "urgency_score": 88.0,
+          "medical_needs": [
+            "Fresh Water",
+            "Splints"
+          ],
+          "hazard_level": 2.0
+        },
+        {
+          "id": "isl_shipwreck",
+          "name": "Shipwreck Cove",
+          "latitude": 19.820,
+          "longitude": -75.980,
+          "population": 280,
+          "children_count": 50,
+          "elderly_count": 40,
+          "injured_count": 25,
+          "urgency_level": "HIGH",
+          "urgency_score": 75.0,
+          "medical_needs": [
+            "Emergency Rations",
+            "Blankets"
+          ],
+          "hazard_level": 1.6
+        },
+        {
+          "id": "isl_nassau",
+          "name": "Nassau Ruins",
+          "latitude": 25.047,
+          "longitude": -77.355,
+          "population": 390,
+          "children_count": 85,
+          "elderly_count": 55,
+          "injured_count": 40,
+          "urgency_level": "HIGH",
+          "urgency_score": 83.0,
+          "medical_needs": [
+            "Clean Water",
+            "Antibiotics"
+          ],
+          "hazard_level": 1.8
+        },
+        {
+          "id": "isl_dead_man",
+          "name": "Dead Man's Cay",
+          "latitude": 18.520,
+          "longitude": -75.500,
+          "population": 110,
+          "children_count": 20,
+          "elderly_count": 15,
+          "injured_count": 10,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 52.0,
+          "medical_needs": [
+            "Bandages"
+          ],
+          "hazard_level": 1.1
+        },
+        {
+          "id": "isl_cayman",
+          "name": "Cayman Trench Outpost",
+          "latitude": 19.313,
+          "longitude": -81.254,
+          "population": 190,
+          "children_count": 38,
+          "elderly_count": 22,
+          "injured_count": 18,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 62.0,
+          "medical_needs": [
+            "Water Purification",
+            "Food"
+          ],
+          "hazard_level": 1.3
+        },
+        {
+          "id": "isl_barbados",
+          "name": "Little Barbados Reef",
+          "latitude": 16.850,
+          "longitude": -72.100,
+          "population": 95,
+          "children_count": 15,
+          "elderly_count": 10,
+          "injured_count": 8,
+          "urgency_level": "LOW",
+          "urgency_score": 35.0,
+          "medical_needs": [
+            "Basic Supplies"
+          ],
+          "hazard_level": 0.9
+        },
+        {
+          "id": "isl_saba",
+          "name": "Saba Rock Refuge",
+          "latitude": 17.632,
+          "longitude": -63.237,
+          "population": 140,
+          "children_count": 28,
+          "elderly_count": 18,
+          "injured_count": 14,
+          "urgency_level": "HIGH",
+          "urgency_score": 71.0,
+          "medical_needs": [
+            "Antibiotics",
+            "Burn Kits"
+          ],
+          "hazard_level": 1.5
+        },
+        {
+          "id": "isl_curacao",
+          "name": "Curacao Cove",
+          "latitude": 15.800,
+          "longitude": -70.500,
+          "population": 165,
+          "children_count": 30,
+          "elderly_count": 20,
+          "injured_count": 15,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 58.0,
+          "medical_needs": [
+            "Rations"
+          ],
+          "hazard_level": 1.2
+        },
+        {
+          "id": "isl_isla_cruces",
+          "name": "Isla Cruces",
+          "latitude": 20.800,
+          "longitude": -78.200,
+          "population": 220,
+          "children_count": 40,
+          "elderly_count": 30,
+          "injured_count": 25,
+          "urgency_level": "HIGH",
+          "urgency_score": 79.0,
+          "medical_needs": [
+            "Surgical Kits",
+            "Clean Water"
+          ],
+          "hazard_level": 1.7
+        }
+      ],
+      "ships": [
+        {
+          "id": "ship_black_pearl",
+          "name": "The Black Pearl",
+          "type": "Fast Sloop",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 300,
+          "current_load": 0,
+          "speed_knots": 32.0,
+          "fuel_capacity": 1200.0,
+          "current_fuel": 1200.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_queen_anne",
+          "name": "Queen Anne's Revenge",
+          "type": "Heavy Transport",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 650,
+          "current_load": 0,
+          "speed_knots": 21.0,
+          "fuel_capacity": 1800.0,
+          "current_fuel": 1800.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_flying_dutchman",
+          "name": "Flying Dutchman",
+          "type": "Medium Frigate",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 420,
+          "current_load": 0,
+          "speed_knots": 28.0,
+          "fuel_capacity": 1400.0,
+          "current_fuel": 1400.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_sea_viper",
+          "name": "Sea Viper",
+          "type": "Fast Cutter",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 220,
+          "current_load": 0,
+          "speed_knots": 34.0,
+          "fuel_capacity": 950.0,
+          "current_fuel": 950.0,
+          "status": "DOCKED"
+        }
+      ]
+    },
+    {
+      "id": "armada_maelstrom",
+      "name": "Extreme: The Armada Maelstrom",
+      "difficulty": "Master",
+      "description": "Category 5 hurricane strikes 18 islands across the Caribbean Sea. Genetic search algorithm shines in solving this NP-hard routing nightmare.",
+      "islands": [
+        {
+          "id": "isl_1",
+          "name": "Tortuga Citadel",
+          "latitude": 20.054,
+          "longitude": -72.787,
+          "population": 360,
+          "children_count": 80,
+          "elderly_count": 65,
+          "injured_count": 60,
+          "urgency_level": "CRITICAL",
+          "urgency_score": 98.0,
+          "medical_needs": [
+            "Surgeons",
+            "Plasma"
+          ],
+          "hazard_level": 2.8
+        },
+        {
+          "id": "isl_2",
+          "name": "Isla de Muerta",
+          "latitude": 18.210,
+          "longitude": -71.250,
+          "population": 240,
+          "children_count": 50,
+          "elderly_count": 40,
+          "injured_count": 35,
+          "urgency_level": "CRITICAL",
+          "urgency_score": 91.0,
+          "medical_needs": [
+            "Fresh Water"
+          ],
+          "hazard_level": 2.2
+        },
+        {
+          "id": "isl_3",
+          "name": "Shipwreck Cove",
+          "latitude": 19.820,
+          "longitude": -75.980,
+          "population": 290,
+          "children_count": 55,
+          "elderly_count": 45,
+          "injured_count": 30,
+          "urgency_level": "HIGH",
+          "urgency_score": 84.0,
+          "medical_needs": [
+            "Rations"
+          ],
+          "hazard_level": 1.9
+        },
+        {
+          "id": "isl_4",
+          "name": "Nassau Fortress",
+          "latitude": 25.047,
+          "longitude": -77.355,
+          "population": 420,
+          "children_count": 90,
+          "elderly_count": 65,
+          "injured_count": 45,
+          "urgency_level": "CRITICAL",
+          "urgency_score": 94.0,
+          "medical_needs": [
+            "Antibiotics"
+          ],
+          "hazard_level": 2.4
+        },
+        {
+          "id": "isl_5",
+          "name": "Dead Man's Cay",
+          "latitude": 18.520,
+          "longitude": -75.500,
+          "population": 130,
+          "children_count": 25,
+          "elderly_count": 20,
+          "injured_count": 12,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 55.0,
+          "medical_needs": [
+            "Bandages"
+          ],
+          "hazard_level": 1.2
+        },
+        {
+          "id": "isl_6",
+          "name": "Grand Cayman",
+          "latitude": 19.313,
+          "longitude": -81.254,
+          "population": 260,
+          "children_count": 50,
+          "elderly_count": 35,
+          "injured_count": 25,
+          "urgency_level": "HIGH",
+          "urgency_score": 73.0,
+          "medical_needs": [
+            "Burn Kits"
+          ],
+          "hazard_level": 1.5
+        },
+        {
+          "id": "isl_7",
+          "name": "Rum Cay Haven",
+          "latitude": 21.050,
+          "longitude": -74.850,
+          "population": 180,
+          "children_count": 35,
+          "elderly_count": 25,
+          "injured_count": 20,
+          "urgency_level": "HIGH",
+          "urgency_score": 77.0,
+          "medical_needs": [
+            "Water Purification"
+          ],
+          "hazard_level": 1.6
+        },
+        {
+          "id": "isl_8",
+          "name": "Saba Rock",
+          "latitude": 17.632,
+          "longitude": -63.237,
+          "population": 150,
+          "children_count": 30,
+          "elderly_count": 20,
+          "injured_count": 15,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 66.0,
+          "medical_needs": [
+            "Splints"
+          ],
+          "hazard_level": 1.4
+        },
+        {
+          "id": "isl_9",
+          "name": "Curacao Ridge",
+          "latitude": 15.800,
+          "longitude": -70.500,
+          "population": 175,
+          "children_count": 35,
+          "elderly_count": 25,
+          "injured_count": 18,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 61.0,
+          "medical_needs": [
+            "Blankets"
+          ],
+          "hazard_level": 1.3
+        },
+        {
+          "id": "isl_10",
+          "name": "Isla Cruces",
+          "latitude": 20.800,
+          "longitude": -78.200,
+          "population": 250,
+          "children_count": 48,
+          "elderly_count": 32,
+          "injured_count": 28,
+          "urgency_level": "HIGH",
+          "urgency_score": 80.0,
+          "medical_needs": [
+            "Trauma Kits"
+          ],
+          "hazard_level": 1.8
+        },
+        {
+          "id": "isl_11",
+          "name": "Smuggler's Notch",
+          "latitude": 16.400,
+          "longitude": -75.100,
+          "population": 90,
+          "children_count": 15,
+          "elderly_count": 10,
+          "injured_count": 8,
+          "urgency_level": "LOW",
+          "urgency_score": 36.0,
+          "medical_needs": [
+            "First Aid"
+          ],
+          "hazard_level": 0.9
+        },
+        {
+          "id": "isl_12",
+          "name": "Pirate's Cove",
+          "latitude": 21.600,
+          "longitude": -72.000,
+          "population": 140,
+          "children_count": 28,
+          "elderly_count": 18,
+          "injured_count": 14,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 58.0,
+          "medical_needs": [
+            "Rations"
+          ],
+          "hazard_level": 1.2
+        },
+        {
+          "id": "isl_13",
+          "name": "Maroon Reef",
+          "latitude": 18.900,
+          "longitude": -78.000,
+          "population": 110,
+          "children_count": 22,
+          "elderly_count": 15,
+          "injured_count": 10,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 50.0,
+          "medical_needs": [
+            "Clean Water"
+          ],
+          "hazard_level": 1.1
+        },
+        {
+          "id": "isl_14",
+          "name": "Gallows Point",
+          "latitude": 22.800,
+          "longitude": -76.000,
+          "population": 195,
+          "children_count": 40,
+          "elderly_count": 28,
+          "injured_count": 22,
+          "urgency_level": "HIGH",
+          "urgency_score": 76.0,
+          "medical_needs": [
+            "Antiseptics"
+          ],
+          "hazard_level": 1.6
+        },
+        {
+          "id": "isl_15",
+          "name": "Devil's Triangle Outpost",
+          "latitude": 24.200,
+          "longitude": -73.500,
+          "population": 230,
+          "children_count": 45,
+          "elderly_count": 30,
+          "injured_count": 25,
+          "urgency_level": "HIGH",
+          "urgency_score": 82.0,
+          "medical_needs": [
+            "Antibiotics"
+          ],
+          "hazard_level": 2.0
+        },
+        {
+          "id": "isl_16",
+          "name": "Sirens Inlet",
+          "latitude": 17.100,
+          "longitude": -68.400,
+          "population": 85,
+          "children_count": 14,
+          "elderly_count": 9,
+          "injured_count": 7,
+          "urgency_level": "LOW",
+          "urgency_score": 32.0,
+          "medical_needs": [
+            "Basic Food"
+          ],
+          "hazard_level": 0.8
+        },
+        {
+          "id": "isl_17",
+          "name": "Barbary Cay",
+          "latitude": 19.500,
+          "longitude": -67.200,
+          "population": 160,
+          "children_count": 32,
+          "elderly_count": 22,
+          "injured_count": 18,
+          "urgency_level": "MEDIUM",
+          "urgency_score": 64.0,
+          "medical_needs": [
+            "Bandages"
+          ],
+          "hazard_level": 1.4
+        },
+        {
+          "id": "isl_18",
+          "name": "Black Sand Atoll",
+          "latitude": 15.300,
+          "longitude": -74.000,
+          "population": 75,
+          "children_count": 12,
+          "elderly_count": 8,
+          "injured_count": 6,
+          "urgency_level": "LOW",
+          "urgency_score": 28.0,
+          "medical_needs": [
+            "Basic Aid"
+          ],
+          "hazard_level": 0.7
+        }
+      ],
+      "ships": [
+        {
+          "id": "ship_black_pearl",
+          "name": "The Black Pearl",
+          "type": "Fast Sloop",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 350,
+          "current_load": 0,
+          "speed_knots": 32.0,
+          "fuel_capacity": 1500.0,
+          "current_fuel": 1500.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_queen_anne",
+          "name": "Queen Anne's Revenge",
+          "type": "Heavy Transport",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 750,
+          "current_load": 0,
+          "speed_knots": 21.0,
+          "fuel_capacity": 2200.0,
+          "current_fuel": 2200.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_flying_dutchman",
+          "name": "Flying Dutchman",
+          "type": "Medium Frigate",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 500,
+          "current_load": 0,
+          "speed_knots": 28.0,
+          "fuel_capacity": 1800.0,
+          "current_fuel": 1800.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_sea_viper",
+          "name": "Sea Viper",
+          "type": "Fast Cutter",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 260,
+          "current_load": 0,
+          "speed_knots": 34.0,
+          "fuel_capacity": 1200.0,
+          "current_fuel": 1200.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_royal_fortune",
+          "name": "Royal Fortune",
+          "type": "Medium Frigate",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 450,
+          "current_load": 0,
+          "speed_knots": 27.0,
+          "fuel_capacity": 1600.0,
+          "current_fuel": 1600.0,
+          "status": "DOCKED"
+        },
+        {
+          "id": "ship_adventure_galley",
+          "name": "Adventure Galley",
+          "type": "Heavy Transport",
+          "latitude": 17.936,
+          "longitude": -76.841,
+          "max_capacity": 600,
+          "current_load": 0,
+          "speed_knots": 22.0,
+          "fuel_capacity": 2000.0,
+          "current_fuel": 2000.0,
+          "status": "DOCKED"
+        }
+      ]
+    }
+  ]
+}

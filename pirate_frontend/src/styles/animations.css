@@ -1,0 +1,85 @@
+/* PirateRescue AI — Minimal Animations */
+/* Only purposeful, operational animations. No decorative effects. */
+
+/* Leaflet marker overrides */
+.custom-island-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.distress-halo {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: distress-ping 2.4s ease-out infinite;
+}
+.island-icon-core {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.7);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease;
+  z-index: 10;
+}
+
+/* Route line pulse (subtle, for active routes only) */
+.active-route-line {
+  stroke-dasharray: 6,4;
+  animation: dash-march 1.5s linear infinite;
+}
+@keyframes dash-march {
+  to { stroke-dashoffset: -20; }
+}
+
+/* KPI number transition */
+.kpi-number-transition {
+  transition: color 0.3s ease;
+}
+
+/* Emergency alert entrance */
+.emergency-enter {
+  animation: emergency-slide 0.3s ease forwards;
+}
+@keyframes emergency-slide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Replay vessel movement — handled inline via state */
+
+@keyframes distress-ping {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.0);
+    opacity: 0;
+  }
+}
+
+/* ── ROTATING COMPASS ROSE WATERMARK ─────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes subtle-compass-spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .animate-compass-spin {
+    animation: subtle-compass-spin 50s linear infinite;
+    transform-origin: center center;
+    will-change: transform;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-compass-spin {
+    animation: none !important;
+  }
+}
